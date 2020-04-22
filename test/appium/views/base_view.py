@@ -162,11 +162,6 @@ class ProfileButton(TabButton):
         from views.profile_view import ProfileView
         return ProfileView(self.driver)
 
-    def click(self):
-        from views.profile_view import PrivacyAndSecurityButton
-        self.click_until_presence_of_element(PrivacyAndSecurityButton(self.driver))
-        return self.navigate()
-
 
 class SaveButton(BaseButton):
     def __init__(self, driver):
